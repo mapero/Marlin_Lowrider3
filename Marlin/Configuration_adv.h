@@ -3902,17 +3902,21 @@
   //#define CUSTOM_MENU_MAIN_SCRIPT_RETURN   // Return to status screen after a script
   #define CUSTOM_MENU_MAIN_ONLY_IDLE         // Only show custom menu when the machine is idle
 
-  #define MAIN_MENU_ITEM_1_DESC "Reset All Coordinates" // "Home & UBL Info"
-  #define MAIN_MENU_ITEM_1_GCODE "G92 X0 Y0 Z0" // "G28\nG29 W"
+  #define MAIN_MENU_ITEM_1_DESC "Probe Z" // "Probe Z with touchplate and set offset +5"
+  #define MAIN_MENU_ITEM_1_GCODE "G38.2 Z0\nG92 Z5"
   //#define MAIN_MENU_ITEM_1_CONFIRM          // Show a confirmation dialog before this action
 
-  #define MAIN_MENU_ITEM_2_DESC "Home Z Axis" // "Preheat for " PREHEAT_1_LABEL
-  #define MAIN_MENU_ITEM_2_GCODE "G28 Z" // "M140 S" STRINGIFY(PREHEAT_1_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_1_TEMP_HOTEND)
-  //#define MAIN_MENU_ITEM_2_CONFIRM
+  #define MAIN_MENU_ITEM_2_DESC "Reset X&Y Coordinates" // "Home & UBL Info"
+  #define MAIN_MENU_ITEM_2_GCODE "G92 X0Y0" // "G28\nG29 W"
+  //#define MAIN_MENU_ITEM_2_CONFIRM          // Show a confirmation dialog before this action
 
-  #define MAIN_MENU_ITEM_3_DESC "Home X&Y" // "Preheat for " PREHEAT_2_LABEL
-  #define MAIN_MENU_ITEM_3_GCODE "G28 X Y" // "M140 S" STRINGIFY(PREHEAT_2_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_2_TEMP_HOTEND)
+  #define MAIN_MENU_ITEM_3_DESC "Home Z Axis" // "Preheat for " PREHEAT_1_LABEL
+  #define MAIN_MENU_ITEM_3_GCODE "G28 Z" // "M140 S" STRINGIFY(PREHEAT_1_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_1_TEMP_HOTEND)
   //#define MAIN_MENU_ITEM_3_CONFIRM
+
+  #define MAIN_MENU_ITEM_4_DESC "Home X&Y" // "Preheat for " PREHEAT_2_LABEL
+  #define MAIN_MENU_ITEM_4_GCODE "G28 X Y" // "M140 S" STRINGIFY(PREHEAT_2_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_2_TEMP_HOTEND)
+  //#define MAIN_MENU_ITEM_4_CONFIRM
 
   //#define MAIN_MENU_ITEM_4_DESC "Heat Bed/Home/Level"
   //#define MAIN_MENU_ITEM_4_GCODE "M140 S" STRINGIFY(PREHEAT_2_TEMP_BED) "\nG28\nG29"
